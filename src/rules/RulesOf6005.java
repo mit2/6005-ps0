@@ -33,7 +33,13 @@ public class RulesOf6005 {
             boolean availableToOthers, boolean writtenAsCourseWork,
             boolean citingYourSource, boolean implementationRequired) {
         // TODO: Fill in this method, then remove the exception
-        throw new UnsupportedOperationException();
+//        throw new UnsupportedOperationException();
+    
+        if(writtenByYourself){
+            return true;
+        }else{
+            return(availableToOthers && !writtenAsCourseWork && citingYourSource && !implementationRequired);
+        }
     }
     
     /**

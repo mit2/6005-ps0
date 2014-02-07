@@ -13,9 +13,11 @@ public class TurtleSoup {
      * @param sideLength length of each side
      */
     public static void drawSquare(Turtle turtle, int sideLength) {
-        throw new RuntimeException();
+        for(int x = 0; x < 4; x++){
+        turtle.forward(sideLength);
+        turtle.turn(90.0);
+        }
     }
-
     /**
      * Determine inside angles of a regular polygon.
      * 

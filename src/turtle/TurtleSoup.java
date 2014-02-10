@@ -120,7 +120,16 @@ public class TurtleSoup {
      * @param turtle the turtle context
      */
     public static void drawPersonalArt(Turtle turtle) {
-        throw new RuntimeException();
+        int sides = 5;
+        int sideLength = 100;
+        for(int x = sides; x > 0; x--){
+            for(int y = 30; y>0; y-=10){
+                drawRegularPolygon(turtle, 5, y);
+            }
+            drawRegularPolygon(turtle, 5, 50);
+            turtle.forward(sideLength);
+            turtle.turn(180.0 - calculateRegularPolygonAngle(sides));
+        }
     }
 
     /**
@@ -131,7 +140,9 @@ public class TurtleSoup {
     public static void main(String args[]) {
         DrawableTurtle turtle = new DrawableTurtle();
         
-        drawRegularPolygon(turtle, 5, 50);
+        drawPersonalArt(turtle);
+        
+        //drawRegularPolygon(turtle, 5, 50);
         //drawSquare(turtle, 40);
 
         // draw the window

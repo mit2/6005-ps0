@@ -35,11 +35,8 @@ public class RulesOf6005 {
         // TODO: Fill in this method, then remove the exception
 //        throw new UnsupportedOperationException();
     
-        if(writtenByYourself){
-            return true;
-        }else{
-            return(availableToOthers && !writtenAsCourseWork && citingYourSource && !implementationRequired);
-        }
+        return(writtenByYourself || availableToOthers && !writtenAsCourseWork && citingYourSource && !implementationRequired);
+
     }
     
     /**

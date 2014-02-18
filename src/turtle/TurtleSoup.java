@@ -14,8 +14,8 @@ public class TurtleSoup {
      */
     public static void drawSquare(Turtle turtle, int sideLength) {
         for(int x = 0; x < 4; x++){
-        turtle.forward(sideLength);
-        turtle.turn(90.0);
+            turtle.forward(sideLength);
+            turtle.turn(90.0);
         }
     }
     /**
@@ -101,13 +101,13 @@ public class TurtleSoup {
      * @return list of heading adjustments between points, of size (# of points) - 1.
      */
     public static List<Double> calculateHeadings(List<Integer> xCoords, List<Integer> yCoords) {
-        List<Double> solns = new ArrayList<Double>();
+        List<Double> headings = new ArrayList<Double>();
         double relHeading = 0.0;
         for(int x = 0; x < xCoords.size()-1; x++){
             relHeading = calculateHeadingToPoint(relHeading, xCoords.get(x), yCoords.get(x), xCoords.get(x+1), yCoords.get(x+1));
-            solns.add(relHeading);
+            headings.add(relHeading);
         }
-        return solns;
+        return headings;
     }
 
     /**

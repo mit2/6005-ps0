@@ -33,9 +33,20 @@ public class RulesOf6005 {
             boolean availableToOthers, boolean writtenAsCourseWork,
             boolean citingYourSource, boolean implementationRequired) {
         // TODO: Fill in this method, then remove the exception
-//        throw new UnsupportedOperationException();
+    	
     
-        return(writtenByYourself || availableToOthers && !writtenAsCourseWork && citingYourSource && !implementationRequired);
+     /*
+   	  *  Find the condns for  allauding using code in Assignment -- return true,
+   	  *  otherwise return false.
+   	  */
+   	  
+   	  if(writtenByYourself  && citingYourSource && implementationRequired)
+   	  		return true;
+   	  else
+   	  		return false;
+   	 
+   	
+       //throw new UnsupportedOperationException();
 
     }
     
